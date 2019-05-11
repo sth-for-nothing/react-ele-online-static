@@ -1,0 +1,31 @@
+.search_box {
+    width: 100%;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    padding: .2rem .373333rem;
+    margin: -.013333rem 0;
+    background-image: linear-gradient(0deg, #fff, #000);
+	.search_content {
+        height: 72px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 10px;
+        color: #000;
+        svg {
+            display: inline-block;
+            width: .426667rem;
+            height: .426667rem;
+            margin-right: .133333rem;
+        }
+        span {
+            font-family: simsun;
+            font-weight: bold;
+            color: #666;
+            font-size: .373333rem;
+        }
+    }
+}

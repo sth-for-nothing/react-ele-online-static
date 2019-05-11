@@ -1,0 +1,27 @@
+.shopList, .shopListTitle {
+    background-color: #fff;
+}
+.shopListTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 32px;
+}
+.shopListTitle::after {
+    margin-left: 0.346667rem;
+}
+.shopListTitle::before {
+    margin-right: 0.346667rem;
+}
+.shopListTitle::after, .shopListTitle::before {
+    display: block;
+    content: "";
+    width: 0.53333rem;
+    height: 0.026667rem;
+    background-color: #999;
+}
+.bottom-loadMore {
+    width: 100%;
+    height: 1rem;
+}

@@ -1,0 +1,15 @@
+.comment-tag_li {
+    font-size: .32rem;
+    color: #6d7885;
+    height: .746667rem;
+    line-height: .746667rem;
+    display: inline-block;
+    padding: 0 .24rem;
+    margin: .093333rem;
+    border-radius: .053333rem;
+    background-color: #ebf5ff;
+}
+.activeTag {
+    background-color: #0097ff;
+    color: #fff;
+}

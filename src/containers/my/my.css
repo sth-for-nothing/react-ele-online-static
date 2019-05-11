@@ -1,0 +1,101 @@
+.myPage_main {
+    min-height: 100vh;
+    .user-info_header {
+        display: flex;
+        align-items: center;
+        padding: .666667rem .4rem;
+        color: #fff;
+        background-image: linear-gradient(0deg, rgb(68, 68, 68), #000);
+        .user_avatar {
+            width: 120.064px;
+            height: 120.064px;
+            border-radius: 50%;
+            img {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .user-info_content {
+            flex: 1;
+            overflow: hidden;
+            margin-left: 0.48rem;
+            p {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .username {
+                font-size: .56rem;
+                font-weight: 700;
+                display: flex;
+                align-items: center;   
+            }
+            .phone {
+                display: flex;
+                align-items: center;
+                font-size: .32rem;
+                margin-top: 0.213333rem;
+                svg {
+                    fill: #fff;
+                    margin-right: .066667rem;
+                    width: .186667rem;
+                    height: .293333rem;
+                }
+            }
+        }
+    }
+    .more_icon {
+        width: .266667rem;
+        height: .56rem;
+        svg {
+            display: block;
+        }
+    }
+    .menu-line_section {
+        font-size: .426667rem;
+        line-height: .453333rem;
+        margin-top: .266667rem;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background: #fff;
+        a {
+            font-size: .426667rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            padding-left: .666667rem;
+            aside {
+                margin-left: -.266667rem;
+                margin-right: .266667rem;
+                svg {
+                    width: .48rem;
+                    height: .48rem;   
+                }
+            }
+            .menu_content {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: .373333rem .266667rem .373333rem 0;  
+            }
+        }
+        a:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+    }
+}
+button {
+    appearance: none;
+    background-color: #fff;
+    border: none;
+}
+.logout {
+    color: rgb(255, 0, 0);
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 34px;
+    background-color: #fff;
+    outline: none;
+}

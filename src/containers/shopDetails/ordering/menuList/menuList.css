@@ -1,0 +1,142 @@
+.menuList.container {
+    position: relative;
+    height: 100%;
+    height: 100%;
+    width: 7.946667rem;
+    .scroller {
+        height: 100%;
+        padding-bottom: 1.066667rem;
+        overflow-y: auto;
+        dl {
+            margin: 0;
+            padding: 0;
+            .menu-head_dt {
+                position: relative;
+                margin-left: .266667rem;
+                padding: .2rem .8rem .2rem 0;
+                .menu-cate_title {
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                    .menu-cate_name {
+                        margin-right: .133333rem;
+                        font-weight: 700;
+                        font-size: .32rem;
+                        color: #666;
+                        flex: none;
+                    }
+                    .menu-cate_desc {
+                        flex: 1;
+                        color: #999;
+                        font-size: .266667rem;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+            .menu-item_dd {
+                position: relative;
+                margin: 0;
+                min-height: 3.066667rem;
+                padding-left: .266667rem;
+                .food-detail_root {
+                    padding: .266667rem 0;
+                    margin-bottom: .013333rem;
+                    display: flex;
+                    min-height: 2.746667rem;
+                    position: relative;
+                    .food-detail_logo {
+                        width: 2.533333rem;
+                        height: 2.533333rem;
+                        flex: none;
+                        margin-right: .266667rem;
+                        position: relative;
+                        img {
+                            width: 100%;
+                            border-radius: .053333rem;
+                        }
+                    }
+                    .food-detail_info {
+                        flex: 1;
+                        position: relative;
+                        padding-bottom: .666667rem;
+                        padding-right: .4rem;
+                        .food_name_txt {
+                            font-size: .4rem;
+                            width: 4rem;
+                            position: relative;
+                            padding-right: .4rem;
+                            align-items: start;
+                            font-weight: 700;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                        .food-desc_txt {
+                            width: 4.266667rem;
+                            margin: .133333rem 0;
+                            font-size: .266667rem;
+                            color: #999;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .food-sales_box {
+                            margin: .173333rem 0!important;
+                            color: #999;
+                            font-size: .266667rem;
+                            line-height: 1;
+                            min-height: 1em;
+                            span {
+                                vertical-align: middle;
+                            }
+                            span:last-child {
+                                margin-left: .106667rem;
+                            }
+                        }
+                        .sale_price {
+                            font-size: .48rem;
+                            line-height: .426667rem;
+                            color: #ff5339;
+                            padding-bottom: .093333rem;
+                            display: flex;
+                            align-items: baseline;
+                            position: absolute;
+                            bottom: 0;
+                        }
+                        .food-select_box {
+                            position: absolute;
+                            right: .4rem;
+                            bottom: .066667rem;
+                            .food-select_btn {
+                                display: inline-flex;
+                                font-size: .346667rem;
+                                align-items: center;
+                                a {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    text-decoration: none;
+                                    svg {
+                                        width: .586667rem;
+                                        height: .586667rem;
+                                        vertical-align: middle;
+                                    }
+                                }
+                                .food-num_txt {
+                                    font-size: .373333rem;
+                                    display: inline-block;
+                                    text-align: center;
+                                    color: rgba(0,0,0,.87);
+                                    width: .693333rem;
+                                    vertical-align: middle;
+                                    overflow: hidden;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.search_page {
+    height: 100vh;
+    .search_header {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        position: relative;
+        .search-hd_input {
+            flex: 1;
+            background-color: #fff;
+            padding: .293333rem .293333rem .293333rem 0;
+            display: flex;
+            position: relative;
+            svg {
+                width: .293333rem;
+                height: .293333rem;
+                position: absolute;
+                top: .533333rem;
+                left: .293333rem;
+            }
+            input {
+                flex: 1;
+                font-size: .346667rem;
+                color: #666;
+                background-color: #f8f8f8;
+                padding: .173333rem .4rem .173333rem .88rem;
+                border-radius: 0.05rem;
+            }
+            input, button {
+                appearance: none;
+                outline: none;
+                border: none;
+            }
+            .search-submit_btn {
+                color: #333;
+                font-size: .426667rem;
+                background: #fff;
+                font-weight: 700;
+                margin-left: .293333rem;
+            }
+        }
+    }
+    .search_body {
+        height: calc(100vh - 1.36rem);
+        width: 100%;
+        background-color: #fff;
+        ul li .search-rest_item {
+            display: flex;
+            align-items: center;
+            height: 1.493333rem;
+            padding: 0 .426667rem;
+            img {
+                flex: none;
+                width: .64rem;
+                height: .64rem;
+                margin-right: .426667rem;
+                border-radius: .013333rem;
+            }
+            .rest-item_detail {
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 1.493333rem;
+                border-bottom: 1px solid #e3e3e3;
+                .rest-item_name {
+                    display: flex;
+                    align-items: center;
+                    font-size: .373333rem;
+                    color: #333;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
+                span {
+                    color: #999;
+                    font-size: .32rem;
+                }
+            }
+        }
+        ul .search-word_item {
+            display: flex;
+            font-size: .373333rem;
+            height: 1.173333rem;
+            align-items: center;
+            padding: 0 .4rem;
+            svg {
+                height: .346667rem;
+                width: .346667rem;
+                margin-right: .32rem;
+            }
+            p {
+                flex: 1;
+                height: 1.173333rem;
+                line-height: 1.173333rem;
+                border-bottom: 1px solid #e3e3e3;
+            }
+        }
+        .search-history_block header{
+            display: flex;
+            justify-content: space-between;
+            font-size: .426667rem;
+            color: #666;
+            font-weight: 700;
+            padding: .2rem .333333rem;
+            .clear_history {
+                display: block;
+                padding-top: .053333rem;
+                svg {
+                    height: .32rem;
+                    width: .32rem;
+                    color: #cecece;
+                    fill: currentColor;
+                }
+            }
+        }
+        .search-history_block section {
+            padding: 0 .333333rem .333333rem;
+            .history_item {
+                display: inline-block;
+                font-size: .373333rem;
+                background-color: #f7f7f7;
+                color: #666;
+                border-radius: .066667rem;
+                padding: .2rem .266667rem;
+                margin-right: .333333rem;
+                margin-top: .333333rem;
+            }
+        }
+    }
+}
+
+.loading_svg {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        animation: loadingRotate 1.5s linear infinite;
+    }
+}
+
+@keyframes loadingRotate {
+    0%{ transform: rotate(0deg); }
+ 
+    25%{ transform: rotate(90deg); }
+
+    50%{ transform: rotate(180deg); }
+
+    75%{ transform: rotate(270deg); }
+
+    100%{ transform: rotate(360deg); }
+}

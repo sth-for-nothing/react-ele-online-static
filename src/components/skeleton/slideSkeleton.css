@@ -1,0 +1,38 @@
+.skeletonWrapper, .skeleton-row, .skeleton-cell {
+    display: flex;
+}
+.skeletonWrapper {
+    width: 100%;
+    height: 4.72rem;
+    flex-direction: column;
+    background-color: #fff;
+    .skeleton-row {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: .293333rem;
+        padding-top: 2.933333vw;
+        .skeleton-cell {
+            width: 1.066667rem;
+            flex-direction: column;
+            align-items: center;
+        }
+        .skeleton-cell::before, .skeleton-cell::after {
+            content: "";
+            display: inline-block;
+            background: #f4f4f4;
+        }
+        .skeleton-cell::before {
+            width: 1.066667rem;
+            height: 1.066667rem;
+            margin-top: .08rem;
+            margin-bottom: .053333rem;
+            border-radius: 50%;
+        }
+        .skeleton-cell::after {
+            width: .8rem;
+            height: .373333rem;
+            margin-top: .133333rem;
+        }
+    }
+}

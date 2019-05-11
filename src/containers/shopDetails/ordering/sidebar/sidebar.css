@@ -1,0 +1,34 @@
+.sidebar-category_wrapper {
+    width: 2.053333rem;
+    overflow-y: auto;
+    background-color: #f8f8f8;
+    padding-bottom: 1.066667rem;
+    .sidebar-category_ul {
+        position: relative;
+        z-index: 0;
+        flex: none;
+        .category-item_li {
+            font-size: .32rem;
+            color: #666;
+            position: relative;
+            padding: .466667rem .2rem;
+            img {
+                width: .38rem;
+                height: .38rem;
+                margin-right: .18rem;
+                max-width: 100%;
+                vertical-align: top;
+            }
+        }
+        .category-active_li {
+            color: #333;
+            background-color: #fff;
+        }
+    }
+}
+a {
+    text-decoration: none; 
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    color: #666;
+}

@@ -1,0 +1,92 @@
+.cityList_container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+    .city_input {
+        flex: 1;
+        padding: 0.266667rem .4rem;
+        position: relative;
+        svg {
+            position: absolute;
+            width: 0.373333rem;
+            height: 0.373333rem;
+            left: 0.586667rem;
+            top: 0.56rem;
+        }
+        .search_adderss_input {
+            font-size: .346667rem;
+            color: #999;
+            height: .96rem;
+            line-height: .48rem;
+            width: 100%;
+            border-radius: .026667rem;
+            padding: .24rem .48rem .24rem .666667rem;
+            background: #f2f2f2;
+            appearance: none;
+            outline: 0;
+            border: none;
+        } 
+    }
+    .cur-city_block {
+        font-size: .373333rem;
+        p {
+            color: #666;
+            background: #f5f5f5;
+            padding: .373333rem 0 .186667rem .4rem;
+            border-bottom: 1px solid #ddd;
+        }
+        div {
+            height: 1.333333rem;
+            line-height: 1.333333rem;
+            margin-left: .4rem;
+        }
+    }
+    .city-list_scroll .city_block{
+        font-size: .373333rem;
+        color: #333;
+        .city-block_title {
+            color: #666;
+            background: #f5f5f5;
+            padding: .373333rem 0 .186667rem .4rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .city-block_content {
+            height: 1.333333rem;
+            line-height: 1.333333rem;
+            margin-left: .4rem;
+            border-bottom: 1px solid #ddd;
+            span {
+                display: inline-block;
+                width: 80%;
+                height: 100%;
+            }
+        }
+    }
+    .alphabet_list {
+        position: absolute;
+        right: .266667rem;
+        top: 4rem;
+        width: .533333rem;
+        color: #999;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        span {
+            width: 100%;
+            height: .533333rem;
+            line-height: .533333rem;
+        }
+    }
+    .city-search_list .city-block_content {
+        height: 1.333333rem;
+        line-height: 1.333333rem;
+        margin-left: .4rem;
+        border-bottom: 1px solid #ddd;
+        span {
+            display: inline-block;
+            width: 80%;
+            height: 100%;
+        }
+    }
+}

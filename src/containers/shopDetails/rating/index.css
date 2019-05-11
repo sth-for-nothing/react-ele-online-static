@@ -1,0 +1,79 @@
+.shop-rating_view {
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    .rating-score_view {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2.133333vw;
+        padding: .533333rem 0 .8rem .64rem;
+        background-color: #fff;
+        font-weight: 400;
+        .score-total_left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 3.36rem;
+            color: #666;
+            .total-score_txt {
+                display: flex;
+                align-items: center;
+                p {
+                    font-size: 1.013333rem;
+                    color: #ff6000;                    
+                }
+            }
+            .total-score_star {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                span {
+                    font-size: 0.32rem;
+                    margin-bottom: 0.133333rem;
+                }
+            }
+        }
+        .score-single_right {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #666;
+            .score-taste-packing_lf {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                flex: 1;
+                padding: 0 0.72rem;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    span {
+                        font-size: 0.32rem;
+                        margin-bottom: 0.133333rem;
+                    }
+                    p {
+                        font-size: 0.53333rem;
+                    }
+                }
+            }
+            .score-delivery_rt {
+                width: 2.29333rem;
+                border-left: 1px solid #ddd;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                span {
+                    font-size: 0.32rem;
+                    margin-bottom: 0.133333rem;
+                }
+                p {
+                    font-size: 0.53333rem;
+                }
+            }
+        }
+    }
+}

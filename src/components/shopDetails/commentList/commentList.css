@@ -1,0 +1,9 @@
+.commentList {
+    background-color: #fff;
+    padding: .266667rem .32rem 0;
+    font-size: .36rem;
+    .comment-tags_ul {
+        padding-bottom: .266667rem;
+        border-bottom: 1px solid #eee;
+    }
+}

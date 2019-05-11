@@ -1,0 +1,44 @@
+.foodentry {
+    overflow: hidden;
+    height: 4.72rem;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    .swipe-slide {
+        display: flex;
+        flex-flow: row wrap;
+        .swipe_cell {
+            width: 20%;
+            margin-top: .293333rem;
+            text-align: center;
+            img {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+            span {
+                color: #000;
+                font-size: .32rem;
+                display: block;
+            }
+        }
+    }
+    .swipe_pagination {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0;
+        .swipe_pagination_cell {
+            width: .24rem;
+            height: .04rem;
+            border-radius: 0;
+            background-color: #000;
+            opacity: .3;
+            display: inline-block;
+            margin: 0 .066667rem;
+        }
+        .is-active {
+            background-color: #0085ff;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.inner-shop_info {
+    background-color: #f5f5f5;
+    font-size: .346667rem;
+    overflow-y: auto;
+    .section {
+        font-size: .346667rem;
+        color: #666;
+        margin-bottom: .266667rem;
+        padding: .426667rem .4rem .4rem;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+        h3 {
+            color: #000;
+            font-weight: 700;
+            font-size: .4rem;
+            line-height: .56rem;
+        }
+        .msg_detail {
+            margin-top: .426667rem;
+            span {
+                display: inline-block;
+            }
+            span, div {
+                margin-bottom: .186667rem;
+            }
+        }
+        .albums {
+            margin-top: .213333rem;
+            a {
+                position: relative;
+                float: left;
+                margin-right: .186667rem;
+                width: 2.08rem;
+                height: 2.08rem;
+                overflow: hidden;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                span {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    text-align: center;
+                    height: .48rem;
+                    line-height: .48rem;
+                    color: #eee;
+                    background-color: rgba(0,0,0,.6);
+                }
+            }
+            .maxImg {
+                width: 100%;
+                height: 60%;
+                z-index: 9;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .shop-info_detail {
+            display: flex;
+            flex-direction: column;
+            padding: .4rem .4rem .4rem 0;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: -.4rem;
+            li:not(:first-child) {
+                border-top: 1px solid #ddd;
+            }
+            li {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                padding: .4rem .4rem .4rem 0;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: -.4rem;
+                span:first-child {
+                    font-weight: 700;
+                    color: #333;
+                }
+                span:last-child {
+                    max-width: 6.666667rem;
+                    text-align: right;
+                }
+            }
+        }
+    }
+    .shop-albums_section {
+        overflow: hidden;
+    }
+    .shop-Info_section {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+}

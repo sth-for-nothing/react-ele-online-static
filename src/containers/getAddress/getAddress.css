@@ -1,0 +1,187 @@
+.getAdderss {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: #f4f4f4;
+    font-size: 0.346667rem;
+    line-height: 0.48rem;
+    .no_address {
+        font-size: .32rem;
+        color: #999;
+        text-align: center;
+        background: #fff;
+        padding: .533333rem 0;
+        line-height: .533333rem;
+        p:first-child {
+            font-size: .4rem;
+            margin-bottom: .213333rem;
+        }
+    }
+    .current_address {
+        .current_address_msg {
+            background: #fff;
+			height: 1.173333rem;
+			font-size: .4rem;
+            color: #333;
+			padding: 0 .453333rem 0 .4rem;
+			display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .cur_addr {
+                font-weight: 700;
+                min-width: 6.66666667rem;
+                overflow: hidden;
+                white-space: nowrap;
+				text-overflow: ellipsis;
+            }
+            .pos_address{
+				color: #2395ff;
+				font-size: 0.373333rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				line-height: 0.4rem;
+				svg{
+					width: 0.4rem;
+					height: 0.4rem;
+					margin-right: 0.133333rem;
+				}
+			}
+        }
+    }
+    .detail_address_cell {
+        background: #fff;
+        font-size: 26px;
+        color: #666;
+        font-weight: 400;
+        padding: 0.293333rem 0.453333rem 0.293333rem .4rem;
+        border-bottom: 1px solid #f4f4f4;
+        span:first-child {
+            font-weight: 700;
+            font-size: 36px;
+            color: #333;
+        }
+        span:nth-child(2) {
+            margin: 0 0.1rem;
+        }
+        p:last-child {
+            color: #333;
+            font-size: 26px;
+            padding-top: 10px;
+        }
+    }
+}
+.search_address_form {
+    background-color: #fff; 
+    position: relative;
+    display: flex;
+    .city_click {
+        display: flex;
+        align-items: center;
+        padding-left: 0.4rem;
+        span {
+            font-size: .32rem;
+            background: #fff;
+            width: 1.066667rem;
+            color: #333;
+            text-align: center;
+            margin-right: .133333rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        svg {
+            width: .16rem;
+            height: .16rem;
+        }
+    }
+    .city_input {
+        flex: 1;
+        padding: 0.266667rem .4rem;
+        position: relative;
+        svg {
+            position: absolute;
+            width: 0.373333rem;
+            height: 0.373333rem;
+            left: 0.586667rem;
+            top: 0.56rem;
+        }
+        .search_adderss_input {
+            font-size: .346667rem;
+            color: #999;
+            height: .96rem;
+            line-height: .48rem;
+            width: 100%;
+            border-radius: .026667rem;
+            padding: .24rem .48rem .24rem .666667rem;
+            background: #f2f2f2;
+            appearance: none;
+            outline: 0;
+            border: none;
+        }        
+    }
+}
+
+.addr_list {
+    overflow-y: auto;
+    .addr_cell {
+        display: flex;
+        font-size: .32rem;
+        background-color: #fff;
+        padding: .293333rem .4rem;
+        color: #2a2a2a;
+        border-top: 1px solid #eee;
+        .addr-detail_cell {
+            flex: 1;
+            .addr_name {
+                font-weight: 700;
+                font-size: .4rem;
+                color: #333;                
+            }
+            .addr-detail_txt {
+                color: #333;
+                font-size: .32rem;
+                line-height: .453333rem;
+                margin-top: .053333rem;
+            }
+        }
+        .addr-distance_cell {
+            width: 1.333333rem;
+            text-align: center;
+        }
+    }
+}
+
+h4 {
+    padding: 0.4rem 0 0.186667rem 0.4rem;
+    color: #666;
+}
+
+@keyframes rotate{
+	from{transform: rotate(0)}
+	to{transform: rotate(360deg)}
+}
+.rotate{
+	animation: rotate .8s infinite linear;
+}
+
+.example-enter {
+	transform: translate3d(100%,0,0);
+}
+
+.example-enter.example-enter-active {
+	transform: translate3d(0,0,0);
+	transition: transform 300ms ease-out;
+}
+
+.example-leave {
+	transform: translate3d(0,0,0);
+}
+
+.example-leave.example-leave-active {
+	transform: translate3d(100%,0,0);
+	transition: transform 300ms ease-out;
+}

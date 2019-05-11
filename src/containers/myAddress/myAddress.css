@@ -1,0 +1,59 @@
+.address_block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    input, button, label {
+        appearance: none;
+        border: none;
+        outline: none;
+    }
+    label {
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        background-color: #fff;
+        align-items: center;
+        .left_title {
+            font-size: 34px;
+            padding: 30px;
+            width: 180px;
+        }
+        .rt_content {
+            flex: 1;
+            font-size: 30px;
+            vertical-align: middle;
+            input {
+                width: 100%;
+                border-bottom: 1px solid rgb(245, 244, 244);
+                padding: 10px;
+                font-size: 34px;
+            }
+            .ft_sex .sex_checkbox {
+                padding: 10px 20px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                margin-right: 20px;
+            }
+            .ft_sex .active {
+                background-color: rgb(115, 194, 255);
+            }
+        }
+        .rt_content div {
+            padding: 10px;
+        }
+    }
+    .user_addr {
+        padding-bottom: 40px;
+    }
+    .saveAddr {
+        margin-top: 80px;
+        background-color: rgb(5, 230, 43);
+        color: #fff;
+        width: 80%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        padding: 20px;
+        font-size: 36px;
+        border-radius: 8px;
+    }
+}

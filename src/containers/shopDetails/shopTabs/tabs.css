@@ -1,0 +1,35 @@
+.shoptabs {
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    height: 100vh;
+    overflow: hidden;
+    .tabs_header {
+        display: flex;
+        background-color: #fff;
+        line-height: 1.066667rem;
+        .tab_cell {
+            position: relative;
+            flex: 1;
+            text-align: center;
+            font-size: .4rem;
+            color: #666;
+            border-bottom: 1px solid #ebebeb;
+        }
+        .tab_cell_active .tab_title{
+            display: inline-block;
+            position: relative;
+            color: #333;
+            font-weight: 700;
+            .tab_underline {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: .053333rem;
+                background-color: #2395ff;
+            }
+        }
+    }
+}

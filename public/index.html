@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no,  maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <style>
+      *{padding: 0;margin: 0;list-style: none;text-decoration: none; -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust: none;box-sizing: border-box; -webkit-font-smoothing: antialiased;}
+      body{background-color: #f4f4f4;}
+      h1, h2, h3, h4, h5, h6, p {
+          font-weight: 400;
+      }
+    </style>
+  <title>外卖订餐</title>
+  <script type="text/javascript">
+    let resizeTimer = null
+    const resizeFunc = function (psdw = 750) {
+      var dpr = 0,
+        rem = 0,
+        scale = 0;
+      var htmlDOM = document.documentElement;
+      dpr = window.devicePixelRatio;
+      var currentWidth = htmlDOM.clientWidth;
+      scale = currentWidth / psdw;
+      rem = psdw / 10;
+      rem = rem * scale;
+      htmlDOM.style.fontSize = rem + 'px';
+      htmlDOM.setAttribute('data-dpr', dpr)
+    }
+    resizeFunc(750)
+    window.onresize = function () {
+      if (resizeTimer) clearTimeout(resizeTimer)
+      resizeTimer = setTimeout(resizeFunc, 500)
+      console.log('resize')
+    }
+  </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

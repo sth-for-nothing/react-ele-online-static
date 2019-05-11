@@ -1,0 +1,213 @@
+.shop-cart_view {
+    font-size: .426667rem;
+    .cart-view_mask {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .4;
+        transition: opacity .3s ease;
+    }
+    .cart-body_view {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        transition: transform .3s ease;
+        transform: translate3d(0,100%,0);
+    }
+    .cart-view_open {
+        transform: translateZ(0);
+        bottom: 1.28rem;
+    }
+}
+
+.cart-view_header {
+    display: flex;
+    align-items: center;
+    padding: 0 .4rem;
+    border-bottom: .013333rem solid #ddd;
+    background-color: #eceff1;
+    color: #666;
+    height: 1.066667rem;
+    .cart-view_headTxt {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+    a {
+        flex: none;
+        display: flex;
+        align-items: center;
+        padding-left: .4rem;
+        color: #666;
+        text-decoration: none;
+        font-size: .346667rem;
+        line-height: .4rem;
+        svg {
+            width: .4rem;
+            height: .4rem;
+            fill: #ddd;
+            margin-right: .08rem;
+        }
+    }
+}
+
+.cart-view_body {
+    overflow: auto;
+    max-height: 8rem;
+    .entity-list_ul {
+        flex: none;
+        margin: 0;
+        padding: 0;
+        .entity_li {
+            display: flex;
+            align-items: center;
+            padding: .2rem .333333rem .2rem 0;
+            min-height: 1.466667rem;
+            margin-left: .333333rem;
+            border-bottom: .013333rem solid #eee;
+            .entity-name_txt {
+                flex: 5.5;
+                line-height: normal;
+                em {
+                    display: inline-block;
+                    font-style: normal;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    max-width: 4.666667rem;
+                }
+            }
+            .entity-total_price {
+                flex: 2.5;
+                color: #ff5339;
+                text-align: right;
+                white-space: nowrap;
+                font-weight: 700;
+                .price-descount_txt::before {
+                    content: "\A5";
+                    font-size: .266667rem;
+                    color: currentColor;
+                }
+            }
+            .entity-btn_group {
+                flex: 3;
+                text-align: right;
+                .entity-btn_area {
+                    display: inline-flex;
+                    font-size: .346667rem;
+                    align-items: center;
+                    a {
+                        display: inline-block;
+                        vertical-align: middle;
+                        text-decoration: none;
+                        svg {
+                            width: .586667rem;
+                            height: .586667rem;
+                            vertical-align: middle;
+                            fill: #2396ff;
+                        }
+                    }
+                    .entity-quantity_txt {
+                        display: inline-block;
+                        text-align: center;
+                        color: rgba(0,0,0,.87);
+                        vertical-align: middle;
+                        font-size: .373333rem;
+                        width: .693333rem;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+    .entity_li:not(:last-child) {
+        border-bottom: .013333rem solid #eee;
+    }
+}
+.cart-bottom_btns {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 2.106667rem;
+    background-color: rgba(0,0,0,0.85);
+    -webkit-backdrop-filter: blur(.266667rem);
+    height: 1.28rem;
+    .cart-logo_btn {
+        position: absolute;
+        left: .32rem;
+        bottom: .2rem;
+        width: 1.333333rem;
+        height: 1.333333rem;
+        box-sizing: border-box;
+        border-radius: 100%;
+        background-color: #fff;
+        border: .133333rem solid #444;
+        box-shadow: 0 -0.08rem 0.053333rem 0 rgba(0,0,0,.1);
+        will-change: transform;
+        span {
+            position: absolute;
+            right: -.12rem;
+            top: -.133333rem;
+            line-height: 1;
+            background-image: linear-gradient(-90deg,#ff7416,#ff3c15 98%);
+            color: #fff;
+            border-radius: .32rem;
+            padding: .053333rem .133333rem;
+            font-size: .266667rem;
+        }
+    }
+    .cart-empty_img {
+        background-image: radial-gradient(circle,#363636 .626667rem,#444 0);
+    }
+    .cart-logo_btn::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTU3MTQ0NDc1OTEzIiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQ0NTUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTM0Ni4xMTIgODA2LjkxMnExOS40NTYgMCAzNi44NjQgNy4xNjh0MzAuMjA4IDE5Ljk2OCAyMC40OCAzMC4yMDggNy42OCAzNi44NjQtNy42OCAzNi44NjQtMjAuNDggMzAuMjA4LTMwLjIwOCAyMC40OC0zNi44NjQgNy42OHEtMjAuNDggMC0zNy44ODgtNy42OHQtMzAuMjA4LTIwLjQ4LTIwLjQ4LTMwLjIwOC03LjY4LTM2Ljg2NCA3LjY4LTM2Ljg2NCAyMC40OC0zMC4yMDggMzAuMjA4LTE5Ljk2OCAzNy44ODgtNy4xNjh6TTc3Mi4wOTYgODA4Ljk2cTE5LjQ1NiAwIDM3LjM3NiA3LjE2OHQzMC43MiAxOS45NjggMjAuNDggMzAuMjA4IDcuNjggMzYuODY0LTcuNjggMzYuODY0LTIwLjQ4IDMwLjIwOC0zMC43MiAyMC40OC0zNy4zNzYgNy42OC0zNi44NjQtNy42OC0zMC4yMDgtMjAuNDgtMjAuNDgtMzAuMjA4LTcuNjgtMzYuODY0IDcuNjgtMzYuODY0IDIwLjQ4LTMwLjIwOCAzMC4yMDgtMTkuOTY4IDM2Ljg2NC03LjE2OHpNOTQ0LjEyOCAyMjcuMzI4cTI4LjY3MiAwIDQ0LjU0NCA3LjY4dDIyLjUyOCAxOC45NDQgNi4xNDQgMjQuMDY0LTMuNTg0IDIyLjAxNi0xMy4zMTIgMzcuODg4LTIyLjAxNiA2Mi45NzYtMjMuNTUyIDY4LjA5Ni0xOC45NDQgNTMuMjQ4cS0xMy4zMTIgNDAuOTYtMzMuMjggNTYuODMydC00OS42NjQgMTUuODcybC0zNS44NCAwLTY1LjUzNiAwLTg2LjAxNiAwLTk2LjI1NiAwLTI1My45NTIgMCAxNC4zMzYgOTIuMTYgNTE3LjEyIDBxNDkuMTUyIDAgNDkuMTUyIDQxLjk4NCAwIDIwLjQ4LTkuNzI4IDM1LjMyOHQtMzguNCAxNC44NDhsLTQ5LjE1MiAwLTk0LjIwOCAwLTExOC43ODQgMC0xMTkuODA4IDAtOTkuMzI4IDAtNTUuMjk2IDBxLTIwLjQ4IDAtMzQuMzA0LTkuMjE2dC0yMy4wNC0yNC4wNjQtMTQuODQ4LTMyLjI1Ni04LjcwNC0zMi43NjhxLTEuMDI0LTYuMTQ0LTUuNjMyLTI5LjY5NnQtMTEuMjY0LTU4Ljg4LTE0Ljg0OC03OC44NDgtMTYuMzg0LTg3LjU1MnEtMTkuNDU2LTEwMy40MjQtNDQuMDMyLTIzMC40bC03Ni44IDBxLTE1LjM2IDAtMjUuNi03LjY4dC0xNi44OTYtMTguNDMyLTkuMjE2LTIzLjA0LTIuNTYtMjIuNTI4cTAtMjAuNDggMTMuODI0LTMzLjc5MnQzNy4zNzYtMTMuMzEybDIxLjUwNCAwIDIxLjUwNCAwIDI1LjYgMCAzNC44MTYgMHEyMC40OCAwIDMyLjc2OCA2LjE0NHQxOS40NTYgMTUuMzYgMTAuMjQgMTkuNDU2IDUuMTIgMTcuNDA4cTIuMDQ4IDguMTkyIDQuMDk2IDIzLjA0dDQuMDk2IDMwLjIwOHEzLjA3MiAxOC40MzIgNi4xNDQgMzguOTEybDcwMC40MTYgMHpNODY3LjMyOCAxOTQuNTZsLTM3NC43ODQgMCAxMzUuMTY4LTEzNS4xNjhxMjMuNTUyLTIzLjU1MiA1MS43MTItMjQuMDY0dDUxLjcxMiAyMy4wNHoiIHAtaWQ9IjQ0NTYiIGZpbGw9IiMyMzk1ZmYiPjwvcGF0aD48L3N2Zz4=);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: .6rem;
+        content: "";
+    }
+    .cart-empty_img::before {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTU3MTQ0NDI1MDA4IiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjggMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQxNTIiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzIuMTI1IiBoZWlnaHQ9IjMyIj48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik0zMzIuOCA3OTAuNTI4cTE5LjQ1NiAwIDM2Ljg2NCA3LjE2OHQzMC4yMDggMTkuOTY4IDIwLjQ4IDMwLjIwOCA3LjY4IDM2Ljg2NC03LjY4IDM2Ljg2NC0yMC40OCAzMC4yMDgtMzAuMjA4IDIwLjQ4LTM2Ljg2NCA3LjY4cS0yMC40OCAwLTM3Ljg4OC03LjY4dC0zMC4yMDgtMjAuNDgtMjAuNDgtMzAuMjA4LTcuNjgtMzYuODY0IDcuNjgtMzYuODY0IDIwLjQ4LTMwLjIwOCAzMC4yMDgtMTkuOTY4IDM3Ljg4OC03LjE2OHpNNzU4Ljc4NCA3OTIuNTc2cTE5LjQ1NiAwIDM3LjM3NiA3LjE2OHQzMC43MiAxOS45NjggMjAuNDggMzAuMjA4IDcuNjggMzYuODY0LTcuNjggMzYuODY0LTIwLjQ4IDMwLjIwOC0zMC43MiAyMC40OC0zNy4zNzYgNy42OC0zNi44NjQtNy42OC0zMC4yMDgtMjAuNDgtMjAuNDgtMzAuMjA4LTcuNjgtMzYuODY0IDcuNjgtMzYuODY0IDIwLjQ4LTMwLjIwOCAzMC4yMDgtMTkuOTY4IDM2Ljg2NC03LjE2OHpNOTMwLjgxNiAyMTAuOTQ0cTI4LjY3MiAwIDQ0LjU0NCA3LjY4dDIyLjUyOCAxOC45NDQgNi4xNDQgMjQuMDY0LTMuNTg0IDIyLjAxNi0xMy4zMTIgMzcuODg4LTIyLjAxNiA2Mi45NzYtMjMuNTUyIDY4LjA5Ni0xOC45NDQgNTMuMjQ4cS0xMy4zMTIgNDAuOTYtMzMuMjggNTYuODMydC00OS42NjQgMTUuODcybC0zNS44NCAwLTY1LjUzNiAwLTg2LjAxNiAwLTk2LjI1NiAwLTI1My45NTIgMCAxNC4zMzYgOTIuMTYgNTE3LjEyIDBxNDkuMTUyIDAgNDkuMTUyIDQxLjk4NCAwIDIwLjQ4LTkuNzI4IDM1Ljg0dC0zOC40IDE0LjMzNmwtNDkuMTUyIDAtOTQuMjA4IDAtMTE4Ljc4NCAwLTExOS44MDggMC05OS4zMjggMC01NS4yOTYgMHEtMjAuNDggMC0zNC4zMDQtOS4yMTZ0LTIzLjA0LTI0LjA2NC0xNC44NDgtMzIuMjU2LTguNzA0LTMyLjc2OHEtMS4wMjQtNi4xNDQtNS42MzItMjkuNjk2dC0xMS4yNjQtNTguODgtMTQuODQ4LTc4Ljg0OC0xNi4zODQtODcuNTUycS0xOS40NTYtMTAzLjQyNC00NC4wMzItMjMwLjRsLTc2LjggMHEtMTUuMzYgMC0yNS42LTcuNjh0LTE2Ljg5Ni0xOC40MzItOS4yMTYtMjMuMDQtMi41Ni0yMi41MjhxMC0yMC40OCAxMy44MjQtMzMuNzkydDM3LjM3Ni0xMi4yODhsMTAzLjQyNCAwcTIwLjQ4IDAgMzIuNzY4IDYuMTQ0dDE5LjQ1NiAxNS4zNiAxMC4yNCAxOC45NDQgNS4xMiAxNi44OTZxMi4wNDggOC4xOTIgNC4wOTYgMjMuMDR0NC4wOTYgMzAuMjA4cTMuMDcyIDE4LjQzMiA2LjE0NCAzOC45MTJsNzAwLjQxNiAwek04OTIuOTI4IDMwMi4wOGwtNjQxLjAyNC0yLjA0OCAzNS44NCAxODUuMzQ0IDUzNS41NTIgMS4wMjR6IiBwLWlkPSI0MTUzIiBmaWxsPSIjZmZmZmZmIj48L3BhdGg+PC9zdmc+);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .cart_info {
+        flex: 1;
+        .cart-total_price {
+            font-size: .48rem;
+            line-height: normal;
+            color: #fff;
+        }
+        .entity-total_price,
+        .emptyCart {
+            font-size: .9em;
+            color: #999;
+        }
+    }
+    .submit-btn_area {
+        height: 100%;
+        width: 2.8rem;
+        background-color: rgb(35, 149, 255);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: .4rem;
+        font-weight: 700;
+        user-select: none;
+        line-height: 1.28rem;
+    }
+}

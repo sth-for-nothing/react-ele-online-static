@@ -1,0 +1,26 @@
+.use_header {
+    height: 88px;
+    .use_header_bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: #000;
+        .use_header_title {
+            font-weight: 500;
+            font-size: 18PX;
+			color: #fff;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 88px;
+			line-height: 88px;
+			max-width: 50%;
+			white-space: nowrap;
+			overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

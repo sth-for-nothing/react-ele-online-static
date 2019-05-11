@@ -1,0 +1,90 @@
+.comment {
+    padding: .4rem 0 .32rem;
+    border-bottom: .013333rem solid #eee;
+    .comment_block {
+        position: relative;
+        padding-left: 1.066667rem;
+        .commenter_avatar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0.8rem;
+            height: 0.8rem;
+            img {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+            .defaultAvatar {
+                display: inline-block;
+                // background-position: 0px 60.032px;
+                // background-size: 60.032px;
+                background: url(http://img3.duitang.com/uploads/item/201401/26/20140126183917_VsRdZ.thumb.700_0.jpeg)no-repeat;
+                // background: url(https://sta-op.douyucdn.cn/mgcps/2018/10/30/fe64f63cdc6b468e2222bbe288a6255d.png?x-oss-process=image/format,webp)no-repeat center;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .comment_content {
+            font-size: .346667rem;
+            .content_hd {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                h3 {
+                    font-size: .346667rem;
+                    margin-top: 0;
+                    color: #333;
+                    margin-right: .16rem;
+                }
+                small {
+                    font-size: .293333rem;
+                    color: #999;
+                }
+            }
+            .rating_star span{
+                font-size: .293333rem;
+                margin-left: .106667rem;
+                color: rgb(255, 96, 0);
+            }
+        }
+        .content {
+            color: #333;
+            font-size: .373333rem;
+            margin: .213333rem 0;
+            word-break: break-word;
+        }
+        .store_reply {
+            position: relative;
+            margin: .266667rem 0;
+            padding: .266667rem;
+            background: #f3f3f3;
+            border-radius: .106667rem;
+        }
+        .store_reply::after {
+            content: " ";
+            position: absolute;
+            bottom: 100%;
+            left: .4rem;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 .213333rem .213333rem;
+            border-color: transparent transparent #f3f3f3;
+        }
+        .comment-img_ul {
+            margin-top: .106667rem;
+            margin-bottom: .32rem;
+            li {
+                display: inline-block;
+                margin: 0 .053333rem;
+                img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}
