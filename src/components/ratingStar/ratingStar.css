@@ -10,6 +10,7 @@
     .rating-gray_img img, .rating-active_img img {
         width: 1.493333rem;
         height: .266667rem;
+        line-height: 0.266667rem;
         flex: none;
         max-width: none;
     }

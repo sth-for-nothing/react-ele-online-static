@@ -2,24 +2,21 @@ import React from 'react'
 import Header from '../../components/header'
 import './myAddress.css'
 
-import { requestSubmitAddr } from '../../api/getData'
-
 class MyAddress extends React.Component {
   constructor () {
     super ()
     this.state = {
       name: '',
-      sex: '',
       phone: '',
       address: '',
-      sex: 1
+      sex: '1'
     }
 
     this.handleInputChange = this.handleInputChange.bind(this)
   }
   componentDidMount () {
     document.title = '我的地址'
-    const addr = JSON.parse(localStorage.getItem("RECEIVE_ADDRESS"))[0]
+    const addr = JSON.parse(localStorage.getItem("RECEIVE_ADDRESS")) ? JSON.parse(localStorage.getItem("RECEIVE_ADDRESS"))[0] : []
     const user = this.props.location.state ?  this.props.location.state.user : addr
     this.setState({
       ...user.address
@@ -36,7 +33,6 @@ class MyAddress extends React.Component {
 
   saveAddr () {
     let { name, sex, phone, address } = this.state
-    requestSubmitAddr({ name, sex, phone, address })
     localStorage.setItem('RECEIVE_ADDRESS', JSON.stringify([{ name, sex, phone, address }]))
     window.history.go(-1)
   }
@@ -64,8 +60,8 @@ class MyAddress extends React.Component {
             <div className="left_title"></div>
             <div className="rt_content">
               <div className="ft_sex" onClick={ this.changeSex.bind(this) }>
-                <span className={ `sex_checkbox ${ this.state.sex == 1 ? 'active' : null }`} id="sex_1" value="1">先生</span>
-                <span className={ `sex_checkbox ${ this.state.sex == 2 ? 'active' : null }`} id="sex_2" value="2">女士</span>
+                <span className={ `sex_checkbox ${ this.state.sex === '1' ? 'active' : null }`} id="sex_1" value="1">先生</span>
+                <span className={ `sex_checkbox ${ this.state.sex === '2' ? 'active' : null }`} id="sex_2" value="2">女士</span>
               </div>
             </div>
           </label>

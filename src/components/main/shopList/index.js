@@ -12,7 +12,7 @@ class ShopList extends Component {
     let shopList = this.props.data
     let shopListHTML = shopList.map((item, index) => {
       return (
-        <ShopItem shopDetail={ item.restaurant } searchKeyFood={ item.foods } key={ index } />
+        <ShopItem shopDetail={ item.restaurant || item.rst } searchKeyFood={ item.foods } key={ index } />
       )
     })
 

@@ -35,40 +35,16 @@ const loginAction = (data) => ({
   data
 })
 
-const logoutAction = () => ({
-  type: types.LOGOUT,
-})
-
 // 登录
 export const requestLogin = (phone, password) => dispatch => {
-  const url = URL.root
-  axios.post(`${url}/login`, {
+  let username = Math.random().toString(16).substring(2)
+  window.localStorage.setItem('USER', JSON.stringify({username, phone}))
+  dispatch(loginAction({
+    isLogin: true,
+    username,
     phone,
-    password
-  }).then(res => {
-    const message = res.data.message
-    if (message === 'login' || message === 'signUp') {
-      dispatch(
-        loginAction({
-          isLogin: true,
-          username: res.data.user.username,
-          phone,
-          message: '登录成功'
-        })
-      )
-      delete res.data.user.password
-      window.localStorage.setItem('USER', JSON.stringify(res.data.user))
-    } else if (message === 'pwdWrong') {
-      dispatch(
-        loginAction({
-          isLogin: false,
-          message: '密码错误'
-        })
-      )
-    }
-  }).catch(err => {
-    console.log(err)
-  })
+    message: '登录成功'
+  }))
 }
 
 

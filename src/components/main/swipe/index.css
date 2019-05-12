@@ -4,9 +4,13 @@
     background-color: #fff;
     text-align: center;
     position: relative;
+    box-sizing: border-box;
     .swipe-slide {
         display: flex;
         flex-flow: row wrap;
+        box-sizing: border-box;
+        height: 80%;
+        overflow: visible;
         .swipe_cell {
             width: 20%;
             margin-top: .293333rem;

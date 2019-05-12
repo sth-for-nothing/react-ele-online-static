@@ -1,5 +1,6 @@
 .shopList, .shopListTitle {
     background-color: #fff;
+    overflow: hidden;
 }
 .shopListTitle {
     display: flex;

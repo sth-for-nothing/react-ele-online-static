@@ -27,7 +27,7 @@
 .order-list_ul {
   width: 100%;
   overflow-y: scroll;
-  margin-top: 10px;
+  margin-top: 20px;
 
   .order-card_item {
     display: block;
@@ -86,7 +86,6 @@
             display: flex;
             align-items: center;
             width: 100%;
-            font-size: .373333rem;
             padding: .32rem .346667rem .32rem 0;
             border-bottom: 1px dotted #eee;
             color: rgb(56, 56, 56);
@@ -98,7 +97,7 @@
 
             .food_name {
               flex: 8;
-              font-size: 18px;
+              font-size: .32rem;
               margin-left: .213333rem;
               overflow: hidden;
               overflow: hidden;
@@ -113,7 +112,7 @@
 
             .food_price {
               flex: 3;
-              font-size: 16px;
+              font-size: .32rem;
               text-align: right;
 
               span {
@@ -141,7 +140,7 @@
       button {
         outline: none;
         padding: .133333rem .266667rem;
-        border: 1px solid #2395ff;
+        border: 2px solid #2395ff;
         border-radius: .053333rem;
         background-color: transparent;
         font-size: .346667rem;

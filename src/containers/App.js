@@ -28,7 +28,7 @@ class App extends Component {
     const Checkout = ({ location }) => <CheckoutOrder cartList={ location.state } />
 
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/react-ele-online-static">
         <div>
           <Route exact path='/' component={Main} />
           <Route path='/order' component={Order} />

@@ -136,7 +136,6 @@ export const clearCurrentCart = (shopId) => dispatch => {
     tempList = cartList.filter((item) => item.shopId !== shopId)
   }
   dispatch(clearCurrentCartAction(tempList))
-  console.log('clear')
   setCartToStorage(tempList)
 }
 

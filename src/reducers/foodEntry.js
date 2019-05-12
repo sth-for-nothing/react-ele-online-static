@@ -44,19 +44,8 @@ const getCateListAction = (cateList) => ({
 })
 
 const requestGetFoodEntries = () => dispatch => {
-  let location = JSON.parse(window.localStorage.getItem('LOCATION'))
   const url = URL.foodEntry
-  return axios.get(url, {
-    params: {
-      latitude: location.latitude,
-      longitude: location.longitude,
-      templates: [
-        "main_template",
-        "favourable_template",
-        "svip_template"
-      ]
-    }
-  }).then(res => {
+  return axios.get(url).then(res => {
     let foodEntries = res.data[0].entries
     if (foodEntries) dispatch(successGetFoodEntries(foodEntries))
   }).catch(err => {

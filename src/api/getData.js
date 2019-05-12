@@ -1,5 +1,6 @@
 import axios from 'axios'
-import { URL, param } from './config.js'
+import { URL } from './config.js'
+import shopList from './rsts'
 
 export const getGeoHash = (latitude, longitude) => new Promise((resolve, reject) => {
   const url = URL.geohash
@@ -15,44 +16,12 @@ export const getGeoHash = (latitude, longitude) => new Promise((resolve, reject)
 
 // 店铺详情
 export const getShopdetails = (id) => new Promise((resolve, reject) => {
-  let rstData = JSON.parse(window.localStorage.getItem('RESTAURANT_DATA')),
-    location = JSON.parse(window.localStorage.getItem('LOCATION'))
-  if (rstData && id === rstData.rst.id) {
-    resolve(rstData)
-  } else {
-    const url = URL.shopDetails
-    axios.get(`${url}/${id}/batch_shop`, {
-      params: {
-        user_id: param.USERID,
-        code: '0.3453671834145038', // 后 16 位随机数都行
-        extras: '["activities","albums","license","identification","qualification"]',
-        terminal: "h5",
-        latitude: location.latitude,
-        longitude: location.longitude
-      }
-    }).then(res => {
-      window.localStorage.setItem('RESTAURANT_DATA', JSON.stringify(res.data))
-      if (res.data.menu.length !== 0) {
-        axios.post(`${URL.root}/getNewRst`, {
-          data: res.data
-        })
-      }
-      console.log('get data from network')
-      resolve(res.data)
-    }).catch((err) => {
-      axios.get(`${URL.root}/shopDetail/`, {
-        params: {
-          shop_id: id
-        }
-      }).then(res => {
-        const status = JSON.parse(JSON.stringify(err)).response.status
-        resolve(res.data)
-        if (!res || res.length === 0 && status === 403) {
-          resolve('网络异常，请检查网络')
-        }
-      })
-    })
-  }
+  shopList.forEach(item => {
+    if (item.rst.id === id) {
+      window.localStorage.setItem('RESTAURANT_DATA', JSON.stringify(item))
+      resolve(item)
+    }
+  })
 })
 
 // 商家列表
@@ -193,37 +162,12 @@ const findIdsByName = (name, list) => {
 
 // 获取详细地址
 export const requestGetReceiveAddress = () => new Promise((resolve) => {
-  const user = JSON.parse(localStorage.getItem('USER'))
-  const phone = user ? user.phone : ''
-  axios.get(`${URL.root}/address`, phone).then(res => {
-    window.localStorage.setItem('RECEIVE_ADDRESS', JSON.stringify(res.data))
-    console.log(res.data)
-    resolve(res.data)
-  }).catch(() => {
-    resolve([{"name":"唐","sex":1,"phone":"1365705****","address":"******"}])
-  })
+  let addr = window.localStorage.getItem('RECEIVE_ADDRESS')
+  resolve(JSON.parse(addr) || [])
 })
 
 // 读取订单
 export const requestGetOrderList = () => new Promise((resolve) => {
-  axios.get(`${URL.root}/getOrders`).then(res => {
-    resolve(res.data)
-  }).catch(err => {
     let orderList = JSON.parse(window.localStorage.getItem('ORDER_LIST'))
     resolve(orderList)
-  })
 })
-
-// 提交订单
-export const requestSubmitOrder = (order) => new Promise((resolve) => {
-  axios.post(`${URL.root}/saveOrder`, {
-    order
-  })
-})
-
-// 保存地址
-export const requestSubmitAddr = async (address) => {
-  await axios.post(`${URL.root}/address`, {
-    address
-  })
-}

@@ -87,7 +87,7 @@ const setCurCityLocation = (site) => {
 }
 
 // session
-const setCurCityIntoSession = (city) => {
+const setCurCityIntoSession = (city = '北京市') => {
   window.sessionStorage.setItem('LOCATION', JSON.stringify(city))
 }
 const getCurCityFromSession = () => {
@@ -97,11 +97,12 @@ const getCurCityFromSession = () => {
 // 设置当前地址和城市 state
 export const setCurrentlocation = () => dispatch => {
   getCityList()
-  let sessionCity = getCurCityFromSession(),
-     curLocation = getCurCityLocation()
   
+  let sessionCity = getCurCityFromSession(),
+  curLocation = {"address":"北京市东城区正义路2号","city":"北京市东城区","city_id":3,"distance":"61m","district_id":5001,"geohash":"wx4g0bm69kv3","id":"B000A61A3B","latitude":39.904172,"longitude":116.407417,"name":"北京市人民政府(旧址)","request_id":"5531251658648714497","short_address":"正义路2号"}
+
   let curCity = sessionCity ? sessionCity.city : null
-  if (curLocation) dispatch(getCurAddressAction(curLocation, curCity))
+  dispatch(getCurAddressAction(curLocation, curCity))
 }
 
 export const setCurrentCity = (city) => dispatch => {

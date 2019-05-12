@@ -13,7 +13,7 @@ const URL = {
   // 首页店铺列表
   restaurants: 'restapi/shopping/v3/restaurants',
   // 首页轮播图分类
-  foodEntry: 'restapi/shopping/v2/entries',
+  foodEntry: 'https://www.easy-mock.com/mock/5c9cad0707c0ba1a896adc85/elem/entries',
   // 获取首页轮播分类 id 集
   siftFactors: 'restapi/shopping/v2/foods_page/sift_factors',
   // 每种分类 id
@@ -161,9 +161,9 @@ const formatSwipeData = (data) => {
 // id 转义 "/" 其他符号另加
 const escapeID = (s) => {
   // 去掉转义字符  
-  s = s.replace(/[\'\"\\\/\b\f\n\r\t]/g, '')
+  s = s.replace(/[\'\"\\\/\b\f\n\r\t\s]/g, '')
   // 去掉特殊字符  
-  s = s.replace(/[\@\#\$\%\^\&\*\{\}\:\"\L\<\>\?]/)
+  s = s.replace(/[\@\#\$\%\^\&\*\{\}\:\.\"\L\<\>\?\❣]/)
   // 数字转字母
   const str2arr = s.split('')
   str2arr.forEach((item, key) => {

@@ -173,11 +173,11 @@ class  getAddress extends Component {
                   return (
                     <div key={key}  className="detail_address_cell" onClick={ this.modifySite.bind(this, user) }>
                       <p>
-                        <span>{user.address.name}</span>
-                        <span>{user.address.sex === 1 ? "先生" : "女士"}</span>
-                        <span>{user.address.phone}</span>
+                        <span>{user.name}</span>
+                        <span>{user.sex === '1' ? '先生' : user.sex === '2' ? '女士' : ''}</span>
+                        <span>{user.phone}</span>
                       </p>
-                      <p>{user.address.address}</p>
+                      <p>{user.address}</p>
                     </div>
                   )
                 }) : null

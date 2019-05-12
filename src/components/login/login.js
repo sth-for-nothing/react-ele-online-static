@@ -83,7 +83,7 @@ class Login extends React.Component {
                 <a href="javascript:void(0);">《用户服务协议》</a>
               </section>
               <button className="login-submit_btn" onClick={ this.doLoginSubmit }>
-                登陆
+                登录
               </button>
             </form>
             <a href="javascript:;" className="about">关于我们</a>

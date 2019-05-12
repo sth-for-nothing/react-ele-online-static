@@ -1,5 +1,4 @@
-import { requestRestList } from '../api/getData'
-import { getCurCityLocation } from './getAddress'
+import shopList from '../api/rsts'
 
 const types = {
   SUCCESS_GET_SHOP_LIST: 'SUCCESS_GET_SHOP_LIST',
@@ -36,39 +35,11 @@ const successGetShopList = (list) => ({
   }
 })
 
-const failureGetShopList = () => ({
-  type: types.FAILURE_GET_SHOP__LIST
-})
-
-// localStorage
-const setRestaurantsIntoStorge = (data) => {
-  window.localStorage.setItem('SHOP_LIST', JSON.stringify(data))
-}
-const getRestaurantsFromStorage = () => {
-  let restList = window.localStorage.getItem('SHOP_LIST')
-  return restList ? JSON.parse(restList) : null
-}
 
 // 发送获取商铺信息请求
 const requestGetShopList = ()  => dispatch => {
-  const location = getCurCityLocation()
-  // 未定位
-  if (!location) {
-    dispatch(failureGetShopList())
-    return
-  }
-
-  requestRestList().then(list => {
-    if (list) {
-      setRestaurantsIntoStorge(list)
-      dispatch(successGetShopList(list))
-    }
-  }).catch(err => {
-    console.log(err)
-    dispatch(failureGetShopList())
-    const restList = getRestaurantsFromStorage()
-    dispatch(successGetShopList(restList))
-  })
+  const list = shopList
+  dispatch(successGetShopList(list))
 }
 
 export {

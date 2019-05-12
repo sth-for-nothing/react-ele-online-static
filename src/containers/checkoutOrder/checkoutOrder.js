@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import Header from '../../components/header'
-import { requestGetReceiveAddress, requestSubmitOrder } from '../../api/getData'
+import { requestGetReceiveAddress } from '../../api/getData'
 import { formatUrl } from '../../api/config'
 import './checkoutOrder.css'
 
@@ -22,20 +22,18 @@ class CheckoutOrder extends Component {
   componentDidMount () {
     document.title = '确认订单'
     requestGetReceiveAddress().then(address => {
-      if (!address) {
-        this.props.history.push({
-          pathname: '/address'
-        })
-      } else {
-        const shopDetail = JSON.parse(localStorage.getItem('RESTAURANT_DATA'))
-
+      if (address && address.length > 0) {
         this.setState({
           receiveAddr: address[0],
-          shopDetail,
-          shopName: shopDetail.rst.name,
-          title: '确认订单'
         })
       }
+    })
+    
+    const shopDetail = JSON.parse(localStorage.getItem('RESTAURANT_DATA'))
+    this.setState({
+      shopDetail,
+      shopName: shopDetail.rst.name,
+      title: '确认订单'
     })
   }
 
@@ -43,6 +41,11 @@ class CheckoutOrder extends Component {
     this.setState({
       title: '正在支付'
     })
+    const addr = JSON.parse(window.localStorage.getItem('RECEIVE_ADDRESS'))
+    if (!addr) {
+      alert('未填写收货地址')
+      return
+    }
     if (this.timer)
     clearTimeout(this.timer)
     this.timer = setTimeout(() => {
@@ -69,9 +72,14 @@ class CheckoutOrder extends Component {
     orderList.push({restId, restName, restImg, cartList, created_timestamp})
 
     window.localStorage.setItem('ORDER_LIST', JSON.stringify(orderList))
-    requestSubmitOrder({restId, restName, restImg, cartList, created_timestamp})
 
     this.props.clearCurrentCart(restId)
+  }
+
+  addAddr () {
+    this.props.history.replace({
+      pathname: '/address'
+    })
   }
 
   render () {
@@ -98,14 +106,17 @@ class CheckoutOrder extends Component {
         <div className="checkout_main viewbody">
           <section className="receiveAddr addr_block">
             <p className="title">
-              <span>订单配送至</span>
+              {
+                receiveAddr.address ? <span>订单配送至</span> : <span style={{ fontSize: '28px' }} onClick={ this.addAddr.bind(this) }>添加收货地址</span>
+              }
+              
             </p>
             <p className="addr_detail">
               <span>{ receiveAddr.address }</span>
             </p>
             <h2 className="addr_name">
               <span className="user_name">{ receiveAddr.name }</span>
-              <span className="user_sex">{ receiveAddr.sex === 1 ? '(先生)' : '(女士)' }</span>
+              <span className="user_sex">{ receiveAddr.sex === 1 ? '(先生)' : receiveAddr.sex === 2 ? '(女士)' : '' }</span>
               <span className="phone">{ receiveAddr.phone }</span>
             </h2>
           </section>
