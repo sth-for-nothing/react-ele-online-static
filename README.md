@@ -1,8 +1,7 @@
 # 静态页面 部署 github page
 
-# 主要功能：首页店铺及店铺详情展示、购物车添加、订单支付与展示、用户登录
-
-# 效果展示 [https://sth-for-nothing.github.io/react-ele-online-static/](https://sth-for-nothing.github.io/react-ele-online-static/)
+# 效果展示
+[https://sth-for-nothing.github.io/react-ele-online-static/](https://sth-for-nothing.github.io/react-ele-online-static/)
 
 1. 代码本地运行正常 npm run build
 2. 代码 push 到 github（git add/commit/push）

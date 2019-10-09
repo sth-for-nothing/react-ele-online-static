@@ -87,7 +87,6 @@ class ShopItem extends Component {
           </div>
           <div className="shop_activitys">
             <section className="tag_line">{ tagList }</section>
-            <span><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgwIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgLjI1TDI4MCAwIiBzdHJva2U9IiNDQ0MiIHN0cm9rZS13aWR0aD0iLjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1kYXNoYXJyYXk9IjEiLz48L3N2Zz4=" alt="tag_line" className="dashed_line" /></span>
             <section className="activities">
               <div className="activity_list">{ activityList }</div>
               <div className="activity_btn" onClick={ this.actBtnClick }>

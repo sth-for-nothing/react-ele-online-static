@@ -140,7 +140,6 @@
         flex-wrap: wrap;
         align-items: center;
         margin: .266667rem .266667rem 0 0;
-        font-size: 0.133333rem;
         span {
             margin-right: .133333rem;
             margin-bottom: .106667rem;
@@ -167,6 +166,7 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    padding: 10px;
     .activity_list {
         flex: 1;
         padding-right: .266667rem;
