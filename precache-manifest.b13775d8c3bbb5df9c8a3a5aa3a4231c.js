@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "/react-ele-online-static/static/js/runtime~main.14eadaf8.js"
   },
   {
-    "revision": "ac35968d68d0bca37fc4",
+    "revision": "2cb991ee3e34c06714b3",
     "url": "/react-ele-online-static/static/js/main.1f29505d.chunk.js"
   },
   {
@@ -16,11 +16,11 @@ self.__precacheManifest = [
     "url": "/react-ele-online-static/static/js/2.28e83ac4.chunk.js"
   },
   {
-    "revision": "ac35968d68d0bca37fc4",
-    "url": "/react-ele-online-static/static/css/main.7211aae3.chunk.css"
+    "revision": "2cb991ee3e34c06714b3",
+    "url": "/react-ele-online-static/static/css/main.fbe5f0a2.chunk.css"
   },
   {
-    "revision": "16bce52a3e22d98b3ceab15db033eba6",
+    "revision": "2cf22d1b3c85cc0112dcfce91a45b8bb",
     "url": "/react-ele-online-static/index.html"
   }
 ];
